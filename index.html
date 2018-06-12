@@ -1,0 +1,612 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>My Email Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+            /* RESET CSS */
+            * {box-sizing: border-box;}
+
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed,
+            figure, figcaption, footer, header, hgroup,
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure,
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            blockquote, q {
+                quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+                content: '';
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            body {
+                background-color: lightgray;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            /* CUSTOM CLASSES */
+            .clear {clear: both;}
+
+            .container {
+                max-width: 542px;
+                background-color: #f8f8f8;
+                margin: 0 auto;
+                height: auto;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12px;
+                color: #666666;
+            }
+
+            .row {
+                width: 100%;
+                margin-bottom: 20px;
+
+            }
+
+
+            .input-text {
+                width:214px;
+                height:40px;
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            label {
+                display: inline-block;
+                text-align: left;
+                width: 80px;
+            }
+
+            .text-center {text-align: center;}
+
+            .bg-white {background-color: #ffffff;}
+
+            .bg-footer {background-color: #333333;}
+
+            .left {float: left;}
+
+            .right {float: right;}
+
+            .row-form {
+                width:100%;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .btn-confirm {
+                width: 204px;
+                height: 50px;
+                font-size: 20px;
+                color: #ffffff;
+                font-family: 'Montserrat', sans-serif;
+                background-color: #74b023;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .btn-confirm:hover {cursor: pointer;}
+
+            .btn-download {
+                position: relative;
+                width: 250px;
+                height: 83px;
+                font-size: 20px;
+                color: #ffffff;
+                background-color: #f6303e;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .btn-download > div {
+                position: absolute;
+                top: 30%;
+                left: 8%;
+            }
+
+            .sub-text {font-size: 12px;}
+
+            .mg-b-70 {margin-bottom: 70px;}
+
+
+
+            .col-1 {
+                float: left;
+                width: 30%;
+
+
+            }
+
+            .col-2 {
+                float: left;
+                width: 40%;
+
+
+            }
+
+
+            /* HEADER */
+
+            header {
+                height:69px;
+            }
+
+            /*  LOGO */
+
+            nav .logo {
+                float: left;
+                width:30%;
+                margin: 0;
+                padding:15px;
+            }
+
+            nav .logo img {margin-bottom: -5px}
+
+            nav .logo p {
+                font-size: 20px;
+                margin-left: 10px;
+                font-weight: bolder;
+            }
+
+            nav .logo p span.c {
+                color: #f6303e;
+                font-weight: bolder;
+            }
+
+            nav .logo p span.t {font-size: 1.5em;}
+
+            /* NAV LINK */
+
+            nav .link-nav{
+                float: right;
+                width:30%;
+                margin: 0px;
+                padding-top:15px;
+                line-height: 43px;
+            }
+
+
+            /* BANNER JUMBOTRON */
+
+            .jumbotron {
+                background: url("assets/header.png") center no-repeat;
+                width: 100%;
+                height: 177px;
+            }
+
+            .jumbotron div {
+                height:100%;
+                width:45%;
+                position: relative;
+            }
+
+            .jumbotron div h1 {
+                position: absolute;
+                top:35%;
+                left: 10px;
+                font-size: 1.8em;
+                color: #ffffff;
+            }
+
+            /* TEXT-HEAD */
+
+
+            #text-head div p:first-child {line-height: 50px;}
+
+            #text-head div p:nth-child(2) {line-height: 20px;}
+
+            /* DOWNLOAD */
+
+            #note {
+                line-height:30px;
+                text-align: left;
+            }
+
+            /* LOGIN INSTRUCTIONS - SMARTPHONE*/
+
+
+            #login-instr, #smartphone, #faq, #download, #text-head {padding: 20px;}
+
+            .login-title, .smartphone-title, .faq-title {margin-bottom: 20px;}
+
+            .login-title h1, .smartphone-title h1, .faq-title h1 {
+                line-height: 30px;
+                font-size: 20px;
+                color: #f6303e;
+            }
+
+            .login-title img, .smartphone-title img, .faq-title img {margin-right: 20px;}
+
+            #app-icon {
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            #address {line-height: 20px;}
+
+            /* FOOTER */
+
+            footer {
+                color: #666666;
+                font-size: 11px;
+            }
+
+            footer > div:first-child {padding:20px;}
+
+            #box-col {
+                height:100px;
+                padding: 10px;
+            }
+
+            #box-col:after {
+                content: "";
+                  display: table;
+                  clear: both;
+                            }
+
+            .col-2 {
+                  float: left;
+                  width: 45%;
+                position: relative;
+                  box-sizing: border-box;
+                  height: 100%;
+                  padding: 10px;
+            }
+
+            .col-1 {
+                  float: left;
+                  width: 27.5%;
+                  border-left: 1px solid #ffffff;
+                  box-sizing: border-box;
+                  height: 100%;
+                  padding: 0 10px;
+
+            }
+
+            .col-1 p {line-height: 20px;}
+
+            .social-box {
+                width:50%;
+                position: absolute;
+                left: 25%;
+                bottom: 0;
+            }
+
+            .social-box img {
+                max-width: 100%;
+                float: left;
+            }
+
+            #bottom-line {
+                background-color: #f6303e;
+                height: 20px;
+            }
+
+            /* SMALL DEVICES*/
+
+            @media screen and (max-width: 542px) {
+                .container {
+                    max-width: 100%;
+              }
+            }
+
+            @media screen and (max-width: 420px) {
+                .jumbotron {
+                    background: url("assets/header-467.png") center no-repeat;
+                    width: 100%;
+                    height: 138px;
+                }
+
+                .jumbotron div {
+                    max-width: 30%;
+              }
+
+              .jumbotron div h1 {
+                top: 15%;
+                font-size: 1.5em;
+              }
+
+              nav .link-nav {width:50%;}
+            }
+
+            @media screen and (max-width: 555px) {
+                .btn-download {width:100%;}
+            }
+
+            @media screen and (max-width: 397px) {
+                .jumbotron {
+                    background: url("assets/header-397.png") center no-repeat;
+                    width: 100%;
+                    height: 117px;
+                }
+
+                .jumbotron div {
+                    max-width: 30%;
+              }
+
+              .jumbotron div h1 {
+                top: 15%;
+                font-size: 1.4em;
+              }
+
+              nav .link-nav {width:50%;}
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <!-- CONTAINER -->
+        <div class="container">
+
+            <!-- HEADER & BANNER IMAGE SECTION-->
+            <header>
+                <nav class="row">
+                    <div class="logo">
+                        <img src="assets/logo-2.png" width="50" alt="logo ctrader">
+                        <p><span class="c">c</span><span class="t">T</span>RADER</p>
+                    </div>
+
+                    <div class="link-nav">
+                        <a href="http://www.omf.co.nz">http://www.omf.co.nz</a>
+
+                    </div>
+                    <div class="clear"></div>
+                </nav>
+            </header>
+
+
+            <div class="row jumbotron">
+
+                <div><h1>Your Demo Account is almost ready</h1></div>
+
+            </div> <!-- END HEADER & BANNER IMAGE SECTION -->
+
+            <!-- EMAIL HEADER -->
+
+            <section id="text-head" class="bg-white">
+                <div class="row">
+                    <p>Dear {Firstname}</p>
+                    <p>Thank you for registering for an OMF cTrader Demo Account. Your OMF cTrader ID has been successfully created. Please confirm it using the button below.</p>
+
+                </div>
+            </section> <!-- END EMAIL HEADER -->
+
+            <!-- CONFIRM ACCOUNT SECTION -->
+
+            <section id="form-confirm">
+                <div class="row-form text-center">
+
+                    <div class="row">
+                        <form class="">
+                            <fieldset>
+                                <div class="">
+                                    <label for="email">Email:</label>
+                                    <input id="email" type="email" class="input-text" name="email">
+
+                                </div>
+
+                                <div class="">
+                                    <label for="password">cTrader ID:</label>
+                                    <input id="ctrader_id" type="text" class="input-text" name="ctrader_id">
+                                </div>
+
+                                <div class="">
+                                    <label for="password">Password:</label>
+                                    <input id="password" type="password" class="input-text" name="password">
+                                </div>
+
+
+
+                                    <button type="submit" class="btn-confirm">Confirm cTrader ID</button>
+
+                            </fieldset>
+                        </form>
+                    </div>
+
+
+                </div>
+            </section> <!-- END CONFIRM ACCOUNT SECTION -->
+
+            <!-- DOWNLOAD SECTION -->
+
+            <section id="download" class="bg-white text-center">
+
+                <div class="row">
+
+                    <div class="row">
+                        <p>In case you are having an issue accessing your cTrader ID, please refer to this <a href="#">help page</a> or use the following links to <a href="#">reset your password</a> or <a href="#">change your cTrader ID, registered email or password</a>.</p>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn-download left text-center">
+
+                                <p>cTrader Desktop</p>
+                                <p class="sub-text">OMF cTrader (Desktop Application)</p>
+
+                        </button>
+                        <button class="btn-download right text-center">
+
+                                <p>cTrader Web</p>
+                                <p class="sub-text">Web Access (including MAC OS users)</p>
+
+                        </button>
+                    </div>
+
+                    <div id="note" class="row">
+                        <p>Note: Supported browser are Google Chrome, Safari or Mozilla.</p>
+                    </div>
+
+                </div>
+
+            </section> <!-- END DOWNLOAD SECTION -->
+
+            <!-- LOGIN INSTRUCTIONS -->
+
+            <section id="login-instr">
+                <div class="row">
+                    <div class="login-title">
+                        <img class="left" src="assets/login_icon.png" alt="login-icon">
+                        <h1>Login Instructions</h1>
+                    </div>
+
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a ante sit amet diam interdum volutpat a eu ligula. </p><br>
+                        <p>Ut pretium eget lectus id bibendum. Pellentesque eu purus orci. Pellentesque sed orci a metus maximus vestibulum. Mauris varius ipsum non massa consequat dapibus. Nullam diam nulla, rutrum sit amet enim vitae, lobortis ornare dolor.</p><br>
+                        <p>Morbi feugiat nisi massa, sed faucibus tortor commodo at. Quisque dictum ultrices eros. Nulla facilisis sit amet dui quis dignissim.</p><br>
+                    </div>
+
+                    <div class="text-center">
+                        <img src="assets/login.png" alt="login">
+                    </div>
+
+                </div>
+            </section> <!-- END LOGIN INSTRUCTIONS -->
+
+            <!-- SMARTPHONE -->
+
+            <section id="smartphone" class="bg-white">
+                <div class="row">
+                    <div class="smartphone-title">
+                        <img class="left" src="assets/mobile_icon.png" alt="mobile-icon">
+                        <h1>Smartphone</h1>
+                    </div>
+
+                    <div>
+                        <p>Phasellus feugiat tellus vitae ante efficitur cursus. Vestibulum id lobortis leo. Donec mattis velit varius augue interdum hendrerit. Etiam fringilla sagittis mattis. Integer vitae maximus purus. Integer sed urna augue. Duis luctus sem vel sapien lacinia rhoncus. Vestibulum facilisis fringilla vehicula. Suspendisse potenti. </p><br>
+
+                    </div>
+
+                    <div class="text-center mg-b-70">
+                        <div><img src="assets/screens.png" alt="mobile"></div>
+                        <div id="app-icon" class="text-center">
+                            <img class="left" src="assets/appstore.png" alt="App store">
+                            <img class="left" src="assets/gooleplay.png" alt="Google Play">
+                        </div>
+
+                    </div>
+
+                </div>
+            </section> <!-- END SMARTPHONE -->
+
+            <!-- FAQ -->
+
+            <section id="faq">
+                <div class="row">
+                    <div class="faq-title">
+                        <img class="left" src="assets/faq_icon.png" alt="faq-icon">
+                        <h1>Faq</h1>
+                    </div>
+
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a ante sit amet diam interdum volutpat a eu ligula. </p><br>
+                        <p>Ut pretium eget lectus id bibendum. Pellentesque eu purus orci. Pellentesque sed orci a metus maximus vestibulum. Mauris varius ipsum non massa consequat dapibus. Nullam diam nulla, rutrum sit amet enim vitae, lobortis ornare dolor.</p><br>
+
+                        <div id="address">
+
+                            <p>Kind Regards,</p>
+                            <p>The OMF Team</p>
+                            <p>OM Financial LTD</p>
+                            <p><a href="http://www.omf.co.nz">www.omf.co.nz</a></p>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </section> <!-- END FAQ -->
+
+            <!-- FOOTER -->
+
+            <footer class="bg-footer">
+
+                <div class="">
+
+                    <div id="box-col" class="">
+
+                        <div class="col-2">
+
+                            <div class="social-box">
+
+                                <div><p>Connect with us:</p></div>
+                                <div>
+                                    <div><a href="http://www.twitter.com"><img src="assets/twitter.png" alt="twitter"></a></div>
+                                    <div><a href="http://www.linkedin.com"><img src="assets/linkedin.png" alt="linkedin"></a></div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-1">
+                            <p>dsds</p>
+                            <p>jkjvjvjvjj</p>
+                            <p>jvljvjvvjljvljv</p>
+                            <p>njlblvvkvkvkhvkhkh</p>
+
+                        </div>
+
+                        <div class="col-1">
+                            <p>dsds</p>
+                            <p>jkjvjvjvjj</p>
+                            <p>jvljvjvvjljvljv</p>
+                            <p>njlblvvkvkvkhvkhkh</p>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div id="bottom-line" class="row"></div>
+
+            </footer> <!-- END FOOTER -->
+
+
+
+        </div> <!-- END CONTAINER -->
+
+
+    </body>
+</html>
